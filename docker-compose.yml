@@ -1,5 +1,9 @@
 version: '3'
 services:
+    docker_radius:
+        image: "hatobus/docker_raduis"
+        ports:
+            - "10000:10000"
     redis:
         image: "redis:latest"
         ports:
