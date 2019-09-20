@@ -10,3 +10,12 @@ services:
             - "6379:6379"
         volumes:
             - "./data/redis:/data"
+
+    router:
+        image: "vyos-builder"
+        ports:
+            - "10000:10000"
+        privileged: true
+        volumes:
+            - "$PWD:/vyos"
+        command: /sbin/init
