@@ -1,0 +1,7 @@
+DEVICE=ovsrouter0
+DEVICETYPE=ovs
+TYPE=OVSBridge
+BOOTPROTO=static
+NM_CONTROLLED=no
+ONBOOT=yes
+HOTPLUG=no

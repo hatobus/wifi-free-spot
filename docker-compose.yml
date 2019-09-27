@@ -4,5 +4,12 @@ services:
         image: "redis:latest"
         ports:
             - "6379:6379"
+
+    router:
+        image: "vyos-builder"
+        ports:
+            - "10000:10000"
+        privileged: true
         volumes:
-            - "./data/redis:/data"
+            - "$PWD:/vyos"
+        command: /sbin/init
